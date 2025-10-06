@@ -1,9 +1,15 @@
 import { Hono } from 'hono'
 import { cors } from "hono/cors";
+import { etag } from 'hono/etag'
+import { logger } from 'hono/logger'
+import { poweredBy } from 'hono/powered-by'
 
 import { auth } from '@/lib/auth';
 
 const app = new Hono()
+
+app.use(poweredBy())
+app.use(etag(), logger())
 
 app.use(
     "/api/auth/*",
