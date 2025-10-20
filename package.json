@@ -1,0 +1,12 @@
+{
+  "name": "caesium",
+  "scripts": {
+    "dev": "bun run --hot ./index.ts"
+  },
+  "dependencies": {
+    "hono": "^4.9.10"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  }
+}
